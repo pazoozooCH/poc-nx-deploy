@@ -1,3 +1,3 @@
 name: api
 runtime: nodejs
-description: Manual pulumi project generation
+description: Infrastructure as Code based on Pulumi - managed by @dev-thought/nx-deploy-it
