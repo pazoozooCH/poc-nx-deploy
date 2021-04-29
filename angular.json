@@ -194,6 +194,23 @@
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@dev-thought/nx-deploy-it:deploy",
+          "options": {
+            "main": "apps\\api\\infrastructure\\index.ts",
+            "provider": "azure",
+            "pulumi": {
+              "azure:location": "switzerlandnorth"
+            }
+          }
+        },
+        "destroy": {
+          "builder": "@dev-thought/nx-deploy-it:destroy",
+          "options": {
+            "main": "apps\\api\\infrastructure\\index.ts",
+            "provider": "azure"
+          }
         }
       }
     },
