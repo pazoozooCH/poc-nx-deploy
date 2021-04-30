@@ -2,6 +2,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as resources from "@pulumi/azure-native/resources";
 import * as storage from "@pulumi/azure-native/storage";
 
+import { deployFunctionApp } from './function-app';
+
+
+pulumi.log.info("testing");
+
 // Create an Azure Resource Group
 const resourceGroup = new resources.ResourceGroup("resourceGroup");
 
@@ -29,6 +34,8 @@ const indexHtml = new storage.Blob("index.html", {
   source: new pulumi.asset.FileAsset("index.html"),
   contentType: "text/html",
 });
+
+export const functionAppOutput = deployFunctionApp(resourceGroup, storageAccount);
 
 // Export the primary key of the Storage Account
 const storageAccountKeys = pulumi.all([resourceGroup.name, storageAccount.name]).apply(([resourceGroupName, accountName]) =>
