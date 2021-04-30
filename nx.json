@@ -1,25 +1,15 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "poc-nx-deploy",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZDNlNTIyOTYtNzY5NS00ZjhmLTgxYjYtNTA0MzBjOTMyNjg3fHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -27,20 +17,13 @@
     }
   },
   "projects": {
-    "poc-app-nx-deploy": {
-      "tags": []
-    },
+    "poc-app-nx-deploy": { "tags": [] },
     "poc-app-nx-deploy-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "poc-app-nx-deploy"
-      ]
+      "implicitDependencies": ["poc-app-nx-deploy"]
     },
-    "api": {
-      "tags": []
-    },
-    "api-interfaces": {
-      "tags": []
-    }
+    "api": { "tags": [] },
+    "api-interfaces": { "tags": [] },
+    "api-cloud": { "tags": [] }
   }
 }
