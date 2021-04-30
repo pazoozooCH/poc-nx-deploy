@@ -8,3 +8,5 @@
         "@pulumi/azure-native": "^1.0.0"
     }
 }
+
+// TODO checkout https://github.com/vercel/ncc...

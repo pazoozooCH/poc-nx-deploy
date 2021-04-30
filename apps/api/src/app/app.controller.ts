@@ -12,4 +12,11 @@ export class AppController {
   getData(): Message {
     return this.appService.getData();
   }
+
+  @Get('hello2')
+  getData2(): Message {
+    return {
+      message: `Hello from getData2, it's ${new Date()}`
+    }
+  }
 }
