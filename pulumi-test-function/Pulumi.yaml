@@ -1,0 +1,3 @@
+name: pulumi-test-function
+runtime: nodejs
+description: Testing Azure Function App Deployment using Pulumi
